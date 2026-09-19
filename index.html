@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BetXsoft — iGaming Software Solutions</title>
+<meta name="description" content="Sportsbook, casino, live casino, crypto casino, agent management, payments and backoffice technology for iGaming operators.">
+<style>
+:root{--navy:#03101f;--navy2:#061a30;--blue:#1677ff;--cyan:#20d7ff;--ink:#08111d;--soft:#eef5fb;--muted:#9fb2c7;--line:rgba(68,166,255,.20);--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#fff;background:var(--navy)}a{text-decoration:none;color:inherit}.wrap{width:min(1220px,calc(100% - 38px));margin:auto}
+header{position:sticky;top:0;z-index:40;background:rgba(3,16,31,.9);backdrop-filter:blur(15px);border-bottom:1px solid rgba(255,255,255,.07)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:30px;font-weight:700;letter-spacing:-.045em}.brand .x{color:var(--blue)}.tag{font-size:8px;letter-spacing:.22em;color:#7d93ab}.navlinks{display:flex;gap:26px;color:#c7d4e2;font-size:14px}.navright{display:flex;align-items:center;gap:11px}.lang{background:#081c31;color:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}.btn{border-radius:11px;padding:14px 19px;font-weight:700;border:1px solid rgba(255,255,255,.12);display:inline-flex;align-items:center;gap:10px}.primary{background:linear-gradient(135deg,#16c7ff,#156dff);border-color:transparent}.secondary{background:transparent}
+.hero{min-height:690px;display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center;padding:86px 0}.eyebrow{color:#67dfff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.16em}.hero h1{font-size:70px;line-height:.98;letter-spacing:-.052em;margin:20px 0 24px}.hero h1 span{background:linear-gradient(90deg,#28d8ff,#2377ff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:#a8bbcf;font-size:19px;line-height:1.7;max-width:650px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.micro{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;color:#b9c7d7;font-size:13px}.micro span:before{content:"✓";color:#48e5c5;margin-right:8px;font-weight:700}
+.visual{position:relative;min-height:530px}.screen{position:absolute;inset:18px 0 50px 18px;border-radius:28px;background:linear-gradient(180deg,#0a203a,#04121f);border:1px solid rgba(71,174,255,.27);box-shadow:0 30px 90px rgba(0,0,0,.48);overflow:hidden}.screenbar{height:58px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:12px;color:#8fa5bb}.dash{display:grid;grid-template-columns:142px 1fr;height:calc(100% - 58px)}.sidebar{border-right:1px solid var(--line);padding:15px}.sidebar div{padding:10px;border-radius:8px;color:#8fa4b9;font-size:11px}.sidebar .on{background:rgba(31,181,255,.10);color:#fff}.dashbody{padding:16px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mini{background:#07182b;border:1px solid var(--line);border-radius:12px;padding:13px}.mini small{color:#7890a8}.mini b{display:block;font-size:20px;margin-top:6px}.chart{height:245px;background:#061426;border:1px solid var(--line);border-radius:15px;margin-top:12px;padding:16px;position:relative}.chart svg{position:absolute;left:16px;right:16px;bottom:18px;width:calc(100% - 32px);height:135px}.mobile{position:absolute;right:-14px;bottom:0;width:170px;border-radius:31px;border:7px solid #142238;background:#04101d;padding:10px;box-shadow:0 28px 70px rgba(0,0,0,.52)}.mobscreen{min-height:340px;border-radius:20px;background:#081b30;padding:11px}.mobgames{display:grid;grid-template-columns:1fr 1fr;gap:7px}.mobgame{height:68px;border-radius:10px;background:linear-gradient(145deg,#173b5e,#0b67a6,#17224c)}
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#041526}.proofgrid{display:grid;grid-template-columns:repeat(5,1fr)}.proofitem{padding:26px 12px;text-align:center;border-right:1px solid var(--line)}.proofitem:last-child{border-right:none}.proofitem b{display:block;font-size:30px;color:#64dcff}.proofitem span{font-size:11px;color:#8197ad;text-transform:uppercase;letter-spacing:.08em}
+.light{background:var(--soft);color:var(--ink)}.section{padding:84px 0}.sectionhead{max-width:740px;margin-bottom:38px}.sectionhead.center{margin-left:auto;margin-right:auto;text-align:center}.sectionhead h2{font-size:44px;letter-spacing:-.04em;line-height:1.05;margin:0 0 12px}.sectionhead p{color:#60758a;line-height:1.7}.productgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.product{background:#fff;border:1px solid #dce6ef;border-radius:22px;padding:28px;min-height:270px;box-shadow:0 12px 38px rgba(22,46,72,.06)}.prodtop{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}.picon{width:48px;height:48px;border-radius:14px;background:#eaf6ff;color:#1677ff;display:grid;place-items:center;font-size:22px}.product h3{font-size:24px;margin:20px 0 10px}.product p{color:#64778a;line-height:1.68}.product a{color:#126ef5;font-weight:700;font-size:13px}
+
+.crypto-section{background:radial-gradient(circle at 82% 35%,rgba(22,119,255,.22),transparent 34%),linear-gradient(135deg,#020d18,#061b31);color:#fff;border-top:1px solid rgba(68,166,255,.14);border-bottom:1px solid rgba(68,166,255,.14)}
+.crypto-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}.crypto-copy h2{font-size:46px;line-height:1.05;letter-spacing:-.04em;margin:14px 0 16px}.crypto-copy>p{color:#a6b9cd;line-height:1.75;max-width:650px}.crypto-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0 28px}.crypto-feature{padding:15px 16px;border:1px solid rgba(71,174,255,.20);background:rgba(8,31,55,.58);border-radius:14px}.crypto-feature b{display:block;font-size:14px;margin-bottom:5px}.crypto-feature span{display:block;color:#91a8bf;font-size:12px;line-height:1.5}.crypto-note{display:block;color:#7189a1;font-size:11px;margin-top:14px;line-height:1.5}
+.crypto-visual{border:1px solid rgba(71,174,255,.28);border-radius:26px;padding:22px;background:linear-gradient(160deg,rgba(10,37,66,.94),rgba(3,17,31,.96));box-shadow:0 28px 75px rgba(0,0,0,.34);position:relative;overflow:hidden}.crypto-visual:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(22,119,255,.16);filter:blur(16px);right:-90px;top:-110px}.crypto-status{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid rgba(72,225,193,.26);background:rgba(72,225,193,.08);border-radius:999px;color:#65ead3;font-size:10px;font-weight:800;letter-spacing:.12em;position:relative}.crypto-status:before{content:"";width:7px;height:7px;border-radius:50%;background:#55e3c6;box-shadow:0 0 12px #55e3c6}.wallet-card{position:relative;margin-top:18px;border:1px solid rgba(69,170,255,.28);border-radius:19px;background:linear-gradient(145deg,#0d2946,#081b30);padding:20px}.wallet-card small{color:#7f9ab4;text-transform:uppercase;letter-spacing:.09em;font-size:9px}.wallet-card strong{font-size:27px;display:block;margin:8px 0 4px}.wallet-card p{margin:0;color:#91aac2;font-size:12px}.coin-grid{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}.coin-grid span{height:48px;border:1px solid rgba(66,157,238,.20);background:#07192b;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#dcecff}.crypto-flow{position:relative;margin-top:12px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:8px}.crypto-flow div{padding:11px 8px;text-align:center;border-radius:10px;background:rgba(9,32,55,.85);border:1px solid rgba(66,157,238,.16);color:#a7bdd1;font-size:10px}.crypto-flow i{font-style:normal;color:#2ccfff;font-weight:800}
+@media(max-width:950px){.crypto-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.crypto-copy h2{font-size:32px}.crypto-feature-grid{grid-template-columns:1fr}.crypto-visual{padding:16px;border-radius:20px}.coin-grid{grid-template-columns:repeat(3,1fr)}.coin-grid span:nth-child(n+4){display:none}.crypto-flow{grid-template-columns:1fr auto 1fr}.crypto-flow div:nth-of-type(3),.crypto-flow i:nth-of-type(2){display:none}}
+.darksection{background:linear-gradient(180deg,#041426,#071b31);color:#fff}.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.split h2{font-size:46px;line-height:1.05;letter-spacing:-.04em}.split p{color:#9eb2c7;line-height:1.72}.checklist{display:grid;gap:14px;margin-top:22px}.check{display:flex;gap:12px}.tick{min-width:28px;height:28px;border-radius:8px;background:rgba(36,225,187,.10);border:1px solid rgba(36,225,187,.28);display:grid;place-items:center;color:#58e9cf;font-weight:700}.backoffice{border:1px solid var(--line);border-radius:24px;background:#081c32;padding:18px}.bo-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.bo{border:1px solid var(--line);border-radius:13px;background:#061629;padding:15px;min-height:104px}.bo small{color:#8197ae}.bo b{display:block;font-size:23px;margin-top:8px}
+.providers{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.provider{height:105px;border:1px solid #d9e4ee;background:#fff;border-radius:17px;display:flex;align-items:center;justify-content:center;padding:18px;overflow:hidden}.provider img{max-width:88%;max-height:64px;width:auto;height:auto;object-fit:contain;filter:none}.provider.darklogo{background:#fff}.provider.light{background:#fff}
+.contactband{background:linear-gradient(135deg,#0874ff,#06bfe6);color:#fff}.contactgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}.contactgrid h2{font-size:46px;letter-spacing:-.04em;line-height:1.05;margin-top:0}.contactgrid p{line-height:1.7;color:rgba(255,255,255,.86)}.tgbox{margin-top:24px;padding:18px;border-radius:15px;background:rgba(4,27,53,.16);border:1px solid rgba(255,255,255,.24)}.form{background:#fff;color:#102033;border-radius:24px;padding:27px;box-shadow:0 25px 70px rgba(0,41,90,.20)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:800;color:#486074}.field input,.field select,.field textarea{width:100%;border:1px solid #d5e0e9;border-radius:10px;padding:13px 14px;font:inherit;background:#fbfdff}.field textarea{min-height:120px;resize:vertical}.privacyline{font-size:11px;color:#708396;margin:13px 0}.submit{width:100%;justify-content:center;background:#0b73ff;color:#fff;border:0;cursor:pointer}.formmsg{display:none;margin-top:12px;font-size:12px;color:#207f69}
+footer{background:#020b15;padding:50px 0 24px}.footgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px}footer h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase}footer p,footer a{color:#8ba0b6;font-size:13px;line-height:1.9}.legal{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#71869d;font-size:12px}.legal div:last-child{display:flex;gap:18px}
+@media(max-width:950px){.navlinks{display:none}.hero,.split,.contactgrid{grid-template-columns:1fr}.productgrid{grid-template-columns:1fr}.providers{grid-template-columns:repeat(3,1fr)}.proofgrid{grid-template-columns:1fr 1fr}.proofitem:last-child{grid-column:1/-1}.footgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.wrap{width:min(100% - 26px,1220px)}.nav{height:70px}.brand{font-size:25px}.navright .primary{display:none}.hero{padding:52px 0 58px;min-height:0}.hero h1{font-size:46px}.lead{font-size:17px}.visual{min-height:480px}.screen{inset:10px 0 55px 0}.dash{grid-template-columns:98px 1fr}.sidebar{padding:9px}.sidebar div{font-size:9px;padding:8px}.cards{grid-template-columns:1fr}.mini:nth-child(n+2){display:none}.mobile{width:138px;right:4px}.section{padding:62px 0}.sectionhead h2,.split h2,.contactgrid h2{font-size:32px}.providers{grid-template-columns:1fr 1fr}.proofgrid{grid-template-columns:1fr 1fr}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.footgrid{grid-template-columns:1fr}}
+
+.flag-select-wrap{display:flex;align-items:center;gap:8px}
+.flag-dot{width:20px;height:20px;border-radius:50%;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 0 0 1px rgba(255,255,255,.22);flex:0 0 20px}
+.flag-dot svg{width:100%;height:100%;display:block}
+.lang{min-width:66px}
+
+
+.telegram-float{
+  position:fixed;right:22px;bottom:22px;z-index:99;
+  width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#229ED9;color:#fff;
+  box-shadow:0 12px 35px rgba(0,0,0,.28);
+  transition:.2s ease;
+}
+.telegram-float:hover{transform:translateY(-3px) scale(1.03)}
+.telegram-float svg{width:30px;height:30px;display:block}
+@media(max-width:620px){.telegram-float{right:16px;bottom:16px;width:54px;height:54px}}
+
+
+.provider{height:112px;border:1px solid #d5e2ed;border-radius:17px;display:flex;align-items:center;justify-content:center;padding:20px;overflow:hidden;background:#fff}
+.provider.darklogo{background:#07182b;border-color:#17344f}
+.provider img{display:block;max-width:88%;max-height:66px;width:auto;height:auto;object-fit:contain;filter:none}
+.provider.pragmatic img{max-width:84%}
+.provider.evolution img{max-width:78%;max-height:70px}
+.provider.netent img{max-width:80%}
+.provider.egt img{max-width:82%}
+.provider.hacksaw img{max-width:82%}
+.provider.playson img{max-width:82%}
+.provider.novomatic img{max-width:84%}
+.provider.creed img{max-width:84%}
+.provider.microgaming img{max-width:86%}
+.provider.oaks img{max-width:78%;max-height:70px}
+
+
+.provider,
+.provider.darklogo,
+.provider.light{
+  background:#ffffff !important;
+  border:1px solid #d5e2ed !important;
+}
+
+
+/* Provider logos: one uniform background for every card */
+.provider,
+.provider.darklogo,
+.provider.light,
+.provider.pragmatic,
+.provider.evolution,
+.provider.netent,
+.provider.egt,
+.provider.hacksaw,
+.provider.playson,
+.provider.novomatic,
+.provider.creed,
+.provider.microgaming,
+.provider.oaks {
+  background:#07182b !important;
+  border:1px solid #17344f !important;
+}
+.provider img {
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:84% !important;
+  max-height:68px !important;
+  object-fit:contain !important;
+  filter:none !important;
+  opacity:1 !important;
+}
+
+
+.providers-approved{width:100%;margin:20px auto 0;display:flex;justify-content:center}
+.providers-approved img{display:block;width:100%;max-width:1664px;height:auto;border:0;border-radius:0;object-fit:contain}
+@media(max-width:700px){.providers-approved{overflow:hidden}.providers-approved img{width:100%;height:auto}}
+.providers-more{margin:0;text-align:center;font-size:15px;font-weight:700;color:#536273;letter-spacing:.01em}
+
+
+/* New universal BetXsoft hero slider */
+.hero{display:none!important}
+.betx-hero-slider{
+  position:relative;
+  min-height:620px;
+  overflow:hidden;
+  background:#020b15;
+  border-bottom:1px solid rgba(68,166,255,.20);
+}
+.betx-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .7s ease;
+}
+.betx-slide.active{opacity:1;pointer-events:auto}
+.betx-slide-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center right;
+}
+.betx-slide-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,#020b15 0%,#020b15 32%,rgba(2,11,21,.78) 52%,rgba(2,11,21,.18) 100%);
+}
+.betx-slide-inner{
+  position:relative;
+  z-index:2;
+  width:min(1220px,calc(100% - 38px));
+  min-height:620px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+}
+.betx-copy{max-width:650px;padding:70px 0}
+.betx-kicker{
+  color:#5edcff;
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:800;
+  margin-bottom:18px;
+}
+.betx-copy h1{
+  margin:0 0 20px;
+  color:#fff;
+  font-size:64px;
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+.betx-copy h1 span{
+  background:linear-gradient(90deg,#21d3ff,#2076ff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.betx-slide.casino .betx-copy h1 span{
+  background:linear-gradient(90deg,#b967ff,#7729e8);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.betx-copy p{
+  max-width:560px;
+  color:#b6c6d7;
+  font-size:18px;
+  line-height:1.65;
+  margin:0 0 28px;
+}
+.betx-features{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  color:#d8e5f2;
+  font-size:13px;
+  margin-bottom:30px;
+}
+.betx-features span::before{
+  content:"✓";
+  color:#43e6c4;
+  font-weight:900;
+  margin-right:7px;
+}
+.betx-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 21px;
+  border-radius:11px;
+  background:linear-gradient(135deg,#11c7ff,#126cff);
+  color:#fff;
+  font-weight:800;
+  text-decoration:none;
+}
+.betx-slide.casino .betx-btn{
+  background:linear-gradient(135deg,#a849ff,#6a24e8);
+}
+.betx-dots{
+  position:absolute;
+  z-index:3;
+  left:50%;
+  bottom:20px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:8px;
+}
+.betx-dot{
+  width:9px;height:9px;border-radius:50%;
+  border:0;padding:0;background:rgba(255,255,255,.35);
+  cursor:pointer;
+}
+.betx-dot.active{background:#24cfff}
+.betx-slide.casino ~ .betx-dots .betx-dot.active{background:#9d50ff}
+
+@media(max-width:700px){
+  .betx-hero-slider{min-height:760px}
+  .betx-slide-inner{
+    min-height:760px;
+    width:100%;
+    align-items:flex-end;
+  }
+  .betx-slide-bg{
+    height:310px;
+    bottom:auto;
+    background-size:cover;
+    background-position:center 28%;
+  }
+  .betx-slide.sport .betx-slide-bg{background-image:url('/assets/hero-sport-mobile-clean.jpg')!important;background-position:center 30%}
+  .betx-slide.casino .betx-slide-bg{background-image:url('/assets/hero-casino-mobile-clean.jpg')!important;background-position:center 38%}
+  .betx-slide-bg::after{
+    background:linear-gradient(180deg,rgba(2,11,21,0) 45%,#020b15 100%);
+  }
+  .betx-copy{
+    max-width:none;
+    width:100%;
+    padding:330px 22px 62px;
+  }
+  .betx-kicker{font-size:10px;margin-bottom:10px}
+  .betx-copy h1{font-size:38px;line-height:1.02;margin-bottom:14px;letter-spacing:-.035em}
+  .betx-copy p{font-size:16px;line-height:1.55;margin-bottom:18px}
+  .betx-features{gap:10px 16px;font-size:12px;margin-bottom:20px}
+  .betx-btn{padding:13px 18px}
+  .betx-dots{bottom:14px}
+}
+
+/* Language-aware hero typography */
+html[lang="ru"] .betx-copy h1{font-size:clamp(34px,5vw,66px)}
+html[lang="tr"] .betx-copy h1{font-size:clamp(36px,5.2vw,68px)}
+@media(max-width:620px){
+  html[lang="ru"] .betx-copy h1{font-size:34px;line-height:1.02}
+  html[lang="tr"] .betx-copy h1{font-size:36px;line-height:1.02}
+  html[lang="fr"] .betx-copy h1{font-size:36px;line-height:1.02}
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a href="/" class="brandbox"><div class="brand">Bet<span class="x">X</span>soft</div><div class="tag">iGAMING SOFTWARE SOLUTIONS</div></a>
+<nav class="navlinks"><a href="#products" data-i18n="nav_products">Products</a><a href="#platform" data-i18n="nav_platform">Platform</a><a href="#providers" data-i18n="nav_providers">Providers</a><a href="#contact" data-i18n="nav_contact">Contact</a></nav>
+<div class="navright"><div class="flag-select-wrap"><span id="activeFlag" class="flag-dot" aria-hidden="true"></span><select id="lang" class="lang"><option value="en">EN</option><option value="de">DE</option><option value="fr">FR</option><option value="tr">TR</option><option value="it">IT</option><option value="ru">RU</option><option value="pt">PT</option></select></div><a href="#contact" class="btn primary" data-i18n="demo">Request a Demo</a></div>
+</div>
+</header>
+
+
+<section class="betx-hero-slider" id="betxHeroSlider">
+  <article class="betx-slide active sport">
+    <div class="betx-slide-bg" style="background-image:url('/assets/hero-sport-visual.jpg')"></div>
+    <div class="betx-slide-inner">
+      <div class="betx-copy">
+        <div class="betx-kicker" data-i18n="bh_sport_kicker">SPORTSBOOK SOFTWARE</div>
+        <h1 data-i18n-html="bh_sport_title">SPORTWETTEN<br><span>AUF NÄCHSTEM LEVEL</span></h1>
+        <p data-i18n="bh_sport_p">Leistungsstarke Lösungen für Sportbetting-Operatoren – für Pre-Match, Live-Wetten und skalierbare Plattformen.</p>
+        <div class="betx-features">
+          <span data-i18n="bh_sport_f1">Live Wetten</span><span data-i18n="bh_sport_f2">Statistiken & Datenfeeds</span><span data-i18n="bh_sport_f3">Flexibel & skalierbar</span>
+        </div>
+        <a class="betx-btn" href="/sportsbook.html" data-i18n="bh_learn">Mehr erfahren →</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="betx-slide casino">
+    <div class="betx-slide-bg" style="background-image:url('/assets/hero-casino-visual.jpg')"></div>
+    <div class="betx-slide-inner">
+      <div class="betx-copy">
+        <div class="betx-kicker" data-i18n="bh_casino_kicker">CASINO SOFTWARE</div>
+        <h1 data-i18n-html="bh_casino_title">CASINO ENTERTAINMENT<br><span>AUF HÖCHSTEM NIVEAU</span></h1>
+        <p data-i18n="bh_casino_p">Premium Casino- und Live-Casino-Lösungen mit führenden Providern, stabiler Performance und zentraler Verwaltung.</p>
+        <div class="betx-features">
+          <span data-i18n="bh_casino_f1">Slots & Live Casino</span><span data-i18n="bh_casino_f2">Provider Integration</span><span data-i18n="bh_casino_f3">Stabil & performant</span>
+        </div>
+        <a class="betx-btn" href="/casino.html" data-i18n="bh_learn">Mehr erfahren →</a>
+      </div>
+    </div>
+  </article>
+
+  <div class="betx-dots">
+    <button class="betx-dot active" type="button" aria-label="Sportsbook"></button>
+    <button class="betx-dot" type="button" aria-label="Casino"></button>
+  </div>
+</section>
+
+<main>
+<section class="wrap hero">
+<div>
+<div class="eyebrow" data-i18n="eyebrow">Flexible iGaming technology</div>
+<h1 data-i18n-html="hero">ONE PLATFORM.<br><span>MORE CONTROL.</span></h1>
+<p class="lead" data-i18n="lead">Launch and scale sportsbook, casino, live casino, agents, payments and backoffice from one modular technology stack.</p>
+<div class="actions"><a href="#contact" class="btn primary" data-i18n="demo2">Request a Demo →</a><a href="#products" class="btn secondary" data-i18n="products_btn">Explore Products</a></div>
+<div class="micro"><span data-i18n="m1">Fast deployment</span><span data-i18n="m2">Modular integrations</span><span data-i18n="m3">Operator-focused controls</span></div>
+</div>
+<div class="visual">
+<div class="screen"><div class="screenbar"><b>BetXsoft Control Center</b><span>Operator Overview</span></div><div class="dash"><div class="sidebar"><div class="on">Overview</div><div>Sportsbook</div><div>Casino</div><div>Players</div><div>Agents</div><div>Payments</div><div>Reports</div></div><div class="dashbody"><div class="cards"><div class="mini"><small>Turnover</small><b>€32,540</b></div><div class="mini"><small>Players</small><b>9,856</b></div><div class="mini"><small>Live Bets</small><b>1,268</b></div></div><div class="chart"><b>Performance</b><svg viewBox="0 0 500 150" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23d7ff" stop-opacity=".45"/><stop offset="1" stop-color="#1677ff" stop-opacity="0"/></linearGradient></defs><path d="M0,118 C60,112 68,92 112,98 S174,60 224,73 S290,45 334,56 S398,28 448,39 S476,20 500,24 L500,150 L0,150Z" fill="url(#g)"/><path d="M0,118 C60,112 68,92 112,98 S174,60 224,73 S290,45 334,56 S398,28 448,39 S476,20 500,24" fill="none" stroke="#22d7ff" stroke-width="3"/></svg></div></div></div></div>
+<div class="mobile"><div class="mobscreen"><b>Casino</b><div class="mobgames" style="margin-top:12px"><div class="mobgame"></div><div class="mobgame"></div><div class="mobgame"></div><div class="mobgame"></div><div class="mobgame"></div><div class="mobgame"></div></div></div></div>
+</div>
+</section>
+
+<section class="proof"><div class="wrap proofgrid"><div class="proofitem"><b>30+</b><span data-i18n="p1">Markets</span></div><div class="proofitem"><b>200+</b><span data-i18n="p2">Operators</span></div><div class="proofitem"><b>1M+</b><span data-i18n="p3">Players</span></div><div class="proofitem"><b>99.99%</b><span data-i18n="p4">Uptime</span></div><div class="proofitem"><b>24/7</b><span data-i18n="p5">Support</span></div></div></section>
+
+<section id="products" class="light section"><div class="wrap">
+<div class="sectionhead"><div class="eyebrow" data-i18n="prod_eyebrow">Products & solutions</div><h2 data-i18n="prod_title">Technology that adapts to your operating model.</h2><p data-i18n="prod_sub">Use the full stack or integrate the modules you need. BetXsoft is designed for online, mobile, agent and retail operations.</p></div>
+<div class="productgrid">
+<article class="product"><div class="prodtop"><div class="picon">⚽</div><small>01</small></div><h3 data-i18n="s1t">Sportsbook</h3><p data-i18n="s1p">Pre-match and live betting, market controls, limits, risk tools and flexible frontend integration.</p><a href="/sportsbook.html" data-i18n="learn">Explore solution →</a></article>
+<article class="product"><div class="prodtop"><div class="picon">🎰</div><small>02</small></div><h3 data-i18n="s2t">Casino & Live Casino</h3><p data-i18n="s2p">Connect leading slot and live dealer providers through one aggregation and management layer.</p><a href="/casino.html" data-i18n="learn">Explore solution →</a></article>
+<article class="product"><div class="prodtop"><div class="picon">👥</div><small>03</small></div><h3 data-i18n="s3t">Agent & Retail</h3><p data-i18n="s3p">Manage agents, shops, commissions, balances, cash operations and multi-level structures.</p><a href="/agent-retail.html" data-i18n="learn">Explore solution →</a></article>
+<article class="product"><div class="prodtop"><div class="picon">⚙</div><small>04</small></div><h3 data-i18n="s4t">Backoffice & Payments</h3><p data-i18n="s4p">Centralize players, transactions, reporting, permissions, risk and payment integrations.</p><a href="/backoffice-payments.html" data-i18n="learn">Explore solution →</a></article>
+</div></div></section>
+
+
+<section id="crypto" class="crypto-section section"><div class="wrap crypto-grid">
+  <div class="crypto-copy">
+    <div class="eyebrow" data-i18n="crypto_eye">Crypto Casino</div>
+    <h2 data-i18n="crypto_title">Crypto-ready casino infrastructure.</h2>
+    <p data-i18n="crypto_p">Combine casino content with flexible cryptocurrency payment and wallet integrations in one operator-focused setup.</p>
+    <div class="crypto-feature-grid">
+      <div class="crypto-feature"><b data-i18n="cf1t">Crypto payments</b><span data-i18n="cf1p">Connect compatible PSP and wallet infrastructure for deposits and withdrawals.</span></div>
+      <div class="crypto-feature"><b data-i18n="cf2t">Multi-currency</b><span data-i18n="cf2p">Support fiat and crypto balance flows depending on the technical setup.</span></div>
+      <div class="crypto-feature"><b data-i18n="cf3t">Casino integration</b><span data-i18n="cf3p">Combine casino and live casino content with the same platform stack.</span></div>
+      <div class="crypto-feature"><b data-i18n="cf4t">API & reporting</b><span data-i18n="cf4p">Connect transaction and operational data to central reporting workflows.</span></div>
+    </div>
+    <a class="btn primary" href="/crypto-casino.html" data-i18n="crypto_cta">Explore solution →</a>
+    <span class="crypto-note" data-i18n="crypto_note">Availability depends on payment provider, jurisdiction and technical setup.</span>
+  </div>
+  <div class="crypto-visual" aria-label="Crypto Casino integration overview">
+    <div class="crypto-status">CRYPTO READY</div>
+    <div class="wallet-card"><small>BetXsoft Payment Layer</small><strong>Multi-currency</strong><p>Fiat + Crypto Integration</p></div>
+    <div class="coin-grid"><span>₿ BTC</span><span>◆ ETH</span><span>₮ USDT</span><span>Ł LTC</span><span>TRX</span></div>
+    <div class="crypto-flow"><div>Player</div><i>→</i><div>Wallet / PSP</div><i>→</i><div>Casino</div></div>
+  </div>
+</div></section>
+
+<section id="platform" class="darksection section"><div class="wrap split"><div><div class="eyebrow" data-i18n="platform_eye">Operator control</div><h2 data-i18n="platform_title">Run the operation, not the software.</h2><p data-i18n="platform_p">A single operational environment for player management, agents, payments, transactions, sportsbook and casino reporting.</p><div class="checklist"><div class="check"><div class="tick">✓</div><div><b data-i18n="c1t">Real-time reporting</b><br><span data-i18n="c1p">Turnover, GGR, deposits, withdrawals and player activity.</span></div></div><div class="check"><div class="tick">✓</div><div><b data-i18n="c2t">Granular permissions</b><br><span data-i18n="c2p">Define access by role, agent, shop or operational team.</span></div></div><div class="check"><div class="tick">✓</div><div><b data-i18n="c3t">Omnichannel ready</b><br><span data-i18n="c3p">Support online, mobile, agent and retail models.</span></div></div></div></div><div class="backoffice"><div class="bo-grid"><div class="bo"><small>Deposits</small><b>€124,800</b></div><div class="bo"><small>Withdrawals</small><b>€78,420</b></div><div class="bo"><small>Casino GGR</small><b>€36,910</b></div><div class="bo"><small>Sportsbook GGR</small><b>€28,670</b></div></div><div class="bo" style="margin-top:11px;min-height:170px"><small>Performance</small><svg viewBox="0 0 500 120" style="width:100%;height:120px"><path d="M0,95 C60,88 80,70 120,76 S190,50 235,58 S310,28 355,42 S430,20 500,22" fill="none" stroke="#24d6ff" stroke-width="4"/></svg></div></div></div></section>
+
+<section id="providers" class="light section"><div class="wrap"><div class="sectionhead center"><h2 data-i18n="prov_title">Casino & live casino integrations.</h2><p data-i18n="prov_sub">Connect your platform with established gaming content providers.</p></div>
+
+<div class="providers-approved">
+  <img src="/assets/casino-providers.png" alt="BetXsoft Casino & Live Casino providers">
+</div>
+<p class="providers-more" data-i18n="prov_more">Numerous additional providers available</p>
+</div></section>
+
+<section id="contact" class="contactband section"><div class="wrap contactgrid"><div><div class="eyebrow" style="color:#fff" data-i18n="contact_eye">Talk to our team</div><h2 data-i18n="contact_title">Tell us what you want to build.</h2><p data-i18n="contact_p">Send us your project details. Your message will be delivered directly to our contact mailbox.</p></div>
+<form class="form" id="contactForm" action="" data-formsubmit="protected" method="POST">
+<input type="hidden" name="_subject" value="New BetXsoft website enquiry">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://betxsoft.com/?sent=1#contact">
+<div class="formgrid">
+<div class="field"><label data-i18n="fname">First name</label><input name="firstName" required></div>
+<div class="field"><label data-i18n="lname">Last name</label><input name="lastName" required></div>
+<div class="field"><label data-i18n="company">Company</label><input name="company"></div>
+<div class="field"><label data-i18n="email">E-mail</label><input name="email" type="email" required></div>
+<div class="field"><label data-i18n="region">Region of operation</label><input name="region"></div>
+<div class="field"><label data-i18n="interest">Interested in</label><select name="interest"><option>Sportsbook</option><option>Casino / Live Casino</option><option>Crypto Casino</option><option>Agent & Retail</option><option>Full Platform</option><option>Payment Integration</option></select></div>
+<div class="field full"><label data-i18n="message">Message</label><textarea name="message" required></textarea></div>
+</div>
+<div class="privacyline"><span data-i18n="privacy_text">By sending this form, you agree that we may use the information to respond to your enquiry.</span> <a href="/privacy.html" style="color:#126ef5" data-i18n="privacy_link">Privacy Policy</a></div>
+<button class="btn submit" type="submit" data-i18n="send">Send Message →</button><div class="formmsg" id="formMsg" data-i18n="formmsg">Opening Telegram…</div>
+</form></div></section>
+</main>
+
+<footer><div class="wrap"><div class="footgrid"><div><div class="brand">Bet<span class="x">X</span>soft</div><p data-i18n="foot_about">Modular iGaming technology for sportsbook, casino, live casino, agents, payments and backoffice.</p></div><div><h4 data-i18n="nav_products">Products</h4><a href="#products">Sportsbook</a><br><a href="#products">Casino</a><br><a href="/crypto-casino.html">Crypto Casino</a><br><a href="#products">Agent & Retail</a></div><div><h4 data-i18n="nav_platform">Platform</h4><a href="#platform">Backoffice</a><br><a href="#providers" data-i18n="nav_providers">Providers</a><br><a href="#contact">Demo</a></div><div><h4 data-i18n="nav_contact">Contact</h4><a href="https://t.me/BETXSOFT" target="_blank">Telegram: @BETXSOFT</a><br><a href="https://betxsoft.com">betxsoft.com</a></div></div><div class="legal"><div>© 2022 BetXsoft. All rights reserved.</div><div><a href="/privacy.html" data-i18n="privacy_link">Privacy Policy</a><a href="/terms.html" data-i18n="terms">Terms & Conditions</a></div></div></div></footer>
+
+<script>
+const T={
+en:{nav_products:"Products",nav_platform:"Platform",nav_providers:"Providers",nav_contact:"Contact",demo:"Request a Demo",eyebrow:"Flexible iGaming technology",hero:'ONE PLATFORM.<br><span>MORE CONTROL.</span>',lead:"Launch and scale sportsbook, casino, live casino, agents, payments and backoffice from one modular technology stack.",demo2:"Request a Demo →",products_btn:"Explore Products",m1:"Fast deployment",m2:"Modular integrations",m3:"Operator-focused controls",p1:"Markets",p2:"Operators",p3:"Players",p4:"Uptime",p5:"Support",prod_eyebrow:"Products & solutions",prod_title:"Technology that adapts to your operating model.",prod_sub:"Use the full stack or integrate the modules you need. BetXsoft is designed for online, mobile, agent and retail operations.",s1t:"Sportsbook",s1p:"Pre-match and live betting, market controls, limits, risk tools and flexible frontend integration.",s2t:"Casino & Live Casino",s2p:"Connect leading slot and live dealer providers through one aggregation and management layer.",s3t:"Agent & Retail",s3p:"Manage agents, shops, commissions, balances, cash operations and multi-level structures.",s4t:"Backoffice & Payments",s4p:"Centralize players, transactions, reporting, permissions, risk and payment integrations.",crypto_eye:"Crypto Casino",crypto_title:"Crypto-ready casino infrastructure.",crypto_p:"Combine casino content with flexible cryptocurrency payment and wallet integrations in one operator-focused setup.",cf1t:"Crypto payments",cf1p:"Connect compatible PSP and wallet infrastructure for deposits and withdrawals.",cf2t:"Multi-currency",cf2p:"Support fiat and crypto balance flows depending on the technical setup.",cf3t:"Casino integration",cf3p:"Combine casino and live casino content with the same platform stack.",cf4t:"API & reporting",cf4p:"Connect transaction and operational data to central reporting workflows.",crypto_cta:"Explore solution →",crypto_note:"Availability depends on payment provider, jurisdiction and technical setup.",learn:"Explore solution →",platform_eye:"Operator control",platform_title:"Run the operation, not the software.",platform_p:"A single operational environment for player management, agents, payments, transactions, sportsbook and casino reporting.",c1t:"Real-time reporting",c1p:"Turnover, GGR, deposits, withdrawals and player activity.",c2t:"Granular permissions",c2p:"Define access by role, agent, shop or operational team.",c3t:"Omnichannel ready",c3p:"Support online, mobile, agent and retail models.",prov_eye:"Content ecosystem",prov_title:"Casino & live casino integrations.",prov_sub:"Connect your platform with established gaming content providers.",prov_more:"Numerous additional providers available",contact_eye:"Talk to our team",contact_title:"Tell us what you want to build.",contact_p:"Send us your project details. Your message will be delivered directly to our contact mailbox.",fname:"First name",lname:"Last name",company:"Company",email:"E-mail",region:"Region of operation",interest:"Interested in",website:"Website",message:"Message",privacy_text:"By sending this form, you agree that we may use the information to respond to your enquiry.",privacy_link:"Privacy Policy",send:"Send Message →",formmsg:"Opening Telegram…",foot_about:"Modular iGaming technology for sportsbook, casino, live casino, agents, payments and backoffice.",terms:"Terms & Conditions",bh_sport_kicker:"SPORTSBOOK SOFTWARE",bh_sport_title:"SPORTS BETTING<br><span>ON THE NEXT LEVEL</span>",bh_sport_p:"Powerful solutions for sportsbook operators – for pre-match, live betting and scalable platforms.",bh_sport_f1:"Live Betting",bh_sport_f2:"Statistics & Data Feeds",bh_sport_f3:"Flexible & Scalable",bh_casino_kicker:"CASINO SOFTWARE",bh_casino_title:"CASINO ENTERTAINMENT<br><span>AT THE HIGHEST LEVEL</span>",bh_casino_p:"Premium casino and live casino solutions with leading providers, stable performance and centralized management.",bh_casino_f1:"Slots & Live Casino",bh_casino_f2:"Provider Integration",bh_casino_f3:"Stable & High-performance",bh_learn:"Learn more →"},
+de:{nav_products:"Produkte",nav_platform:"Plattform",nav_providers:"Provider",nav_contact:"Kontakt",demo:"Demo anfragen",eyebrow:"Flexible iGaming-Technologie",hero:'EINE PLATTFORM.<br><span>MEHR KONTROLLE.</span>',lead:"Sportsbook, Casino, Live Casino, Agenten, Payments und Backoffice aus einem modularen Technologie-Stack starten und skalieren.",demo2:"Demo anfragen →",products_btn:"Produkte ansehen",m1:"Schnelle Bereitstellung",m2:"Modulare Integrationen",m3:"Kontrolle für Betreiber",p1:"Märkte",p2:"Betreiber",p3:"Spieler",p4:"Verfügbarkeit",p5:"Support",prod_eyebrow:"Produkte & Lösungen",prod_title:"Technologie, die sich Ihrem Geschäftsmodell anpasst.",prod_sub:"Nutzen Sie den gesamten Stack oder nur die benötigten Module. Für Online-, Mobile-, Agenten- und Retail-Betrieb.",s1t:"Sportsbook",s1p:"Pre-Match und Live-Wetten, Märkte, Limits, Risikowerkzeuge und flexible Frontend-Integration.",s2t:"Casino & Live Casino",s2p:"Führende Slots und Live-Dealer über eine zentrale Aggregations- und Managementebene.",s3t:"Agenten & Retail",s3p:"Agenten, Shops, Provisionen, Guthaben, Kassen und mehrstufige Strukturen verwalten.",s4t:"Backoffice & Payments",s4p:"Spieler, Transaktionen, Reporting, Rechte, Risiko und Payment-Integrationen zentral verwalten.",crypto_eye:"Krypto Casino",crypto_title:"Krypto-fähige Casino-Infrastruktur.",crypto_p:"Verbinden Sie Casino-Content mit flexiblen Krypto-Zahlungs- und Wallet-Integrationen in einer betreiberorientierten Lösung.",cf1t:"Krypto-Zahlungen",cf1p:"Kompatible PSP- und Wallet-Anbindungen für Ein- und Auszahlungen integrieren.",cf2t:"Multi-Currency",cf2p:"Fiat- und Krypto-Balances je nach technischer Konfiguration unterstützen.",cf3t:"Casino-Integration",cf3p:"Casino- und Live-Casino-Content im selben Plattform-Stack verbinden.",cf4t:"API & Reporting",cf4p:"Transaktions- und Betriebsdaten zentral in Reporting-Prozesse einbinden.",crypto_cta:"Lösung ansehen →",crypto_note:"Verfügbarkeit abhängig von Payment-Provider, Jurisdiktion und technischem Setup.",learn:"Lösung ansehen →",platform_eye:"Betreiberkontrolle",platform_title:"Steuern Sie den Betrieb, nicht die Software.",platform_p:"Eine zentrale Umgebung für Spieler, Agenten, Payments, Transaktionen sowie Sportsbook- und Casino-Reporting.",c1t:"Echtzeit-Reporting",c1p:"Umsatz, GGR, Einzahlungen, Auszahlungen und Spieleraktivität.",c2t:"Detaillierte Rechte",c2p:"Zugriff nach Rolle, Agent, Shop oder Team definieren.",c3t:"Omnichannel",c3p:"Online-, Mobile-, Agenten- und Retail-Modelle unterstützen.",prov_eye:"Content-Ökosystem",prov_title:"Casino- & Live-Casino-Integrationen.",prov_sub:"Verbinden Sie Ihre Plattform mit etablierten Gaming-Providern.",prov_more:"Zahlreiche weitere Anbieter verfügbar",contact_eye:"Kontakt",contact_title:"Erzählen Sie uns von Ihrem Projekt.",contact_p:"Senden Sie uns Ihre Projektdaten. Ihre Nachricht wird direkt an unser Kontaktpostfach gesendet.",fname:"Vorname",lname:"Nachname",company:"Firma",email:"E-Mail",region:"Betriebsregion",interest:"Interesse",website:"Website",message:"Nachricht",privacy_text:"Mit dem Absenden stimmen Sie zu, dass wir Ihre Angaben zur Bearbeitung der Anfrage verwenden.",privacy_link:"Datenschutz",send:"Nachricht senden →",formmsg:"Telegram wird geöffnet…",foot_about:"Modulare iGaming-Technologie für Sportsbook, Casino, Live Casino, Agenten, Payments und Backoffice.",terms:"Bedingungen",bh_sport_kicker:"SPORTSBOOK SOFTWARE",bh_sport_title:"SPORTWETTEN<br><span>AUF NÄCHSTEM LEVEL</span>",bh_sport_p:"Leistungsstarke Lösungen für Sportbetting-Operatoren – für Pre-Match, Live-Wetten und skalierbare Plattformen.",bh_sport_f1:"Live Wetten",bh_sport_f2:"Statistiken & Datenfeeds",bh_sport_f3:"Flexibel & skalierbar",bh_casino_kicker:"CASINO SOFTWARE",bh_casino_title:"CASINO ENTERTAINMENT<br><span>AUF HÖCHSTEM NIVEAU</span>",bh_casino_p:"Premium Casino- und Live-Casino-Lösungen mit führenden Providern, stabiler Performance und zentraler Verwaltung.",bh_casino_f1:"Slots & Live Casino",bh_casino_f2:"Provider Integration",bh_casino_f3:"Stabil & performant",bh_learn:"Mehr erfahren →"},
+fr:{nav_products:"Produits",nav_platform:"Plateforme",nav_providers:"Fournisseurs",nav_contact:"Contact",demo:"Demander une démo",eyebrow:"Technologie iGaming flexible",hero:'UNE PLATEFORME.<br><span>PLUS DE CONTRÔLE.</span>',lead:"Lancez et développez sportsbook, casino, casino live, agents, paiements et backoffice depuis une pile technologique modulaire.",demo2:"Demander une démo →",products_btn:"Voir les produits",m1:"Déploiement rapide",m2:"Intégrations modulaires",m3:"Contrôle opérateur",p1:"Marchés",p2:"Opérateurs",p3:"Joueurs",p4:"Disponibilité",p5:"Support",prod_eyebrow:"Produits & solutions",prod_title:"Une technologie adaptée à votre modèle opérationnel.",prod_sub:"Utilisez la plateforme complète ou seulement les modules nécessaires, pour online, mobile, agents et retail.",s1t:"Sportsbook",s1p:"Paris pré-match et live, marchés, limites, risque et intégration front-end flexible.",s2t:"Casino & Casino Live",s2p:"Connectez les principaux fournisseurs de slots et live dealer via une couche unique.",s3t:"Agents & Retail",s3p:"Gérez agents, shops, commissions, soldes, cash et structures multi-niveaux.",s4t:"Backoffice & Paiements",s4p:"Centralisez joueurs, transactions, reporting, permissions, risque et paiements.",crypto_eye:"Crypto Casino",crypto_title:"Infrastructure casino compatible crypto.",crypto_p:"Combinez le contenu casino avec des intégrations flexibles de paiements crypto et de wallets dans une solution orientée opérateur.",cf1t:"Paiements crypto",cf1p:"Intégrez des PSP et wallets compatibles pour les dépôts et retraits.",cf2t:"Multi-devises",cf2p:"Gérez des flux fiat et crypto selon la configuration technique.",cf3t:"Intégration casino",cf3p:"Réunissez casino et live casino dans le même environnement de plateforme.",cf4t:"API & reporting",cf4p:"Reliez les données transactionnelles et opérationnelles au reporting central.",crypto_cta:"Voir la solution →",crypto_note:"Disponibilité selon le prestataire de paiement, la juridiction et la configuration technique.",learn:"Voir la solution →",platform_eye:"Contrôle opérateur",platform_title:"Gérez l’activité, pas le logiciel.",platform_p:"Un environnement unique pour joueurs, agents, paiements, transactions, sportsbook et casino.",c1t:"Reporting temps réel",c1p:"Turnover, GGR, dépôts, retraits et activité joueurs.",c2t:"Permissions granulaires",c2p:"Définissez les accès par rôle, agent, shop ou équipe.",c3t:"Omnicanal",c3p:"Online, mobile, agents et retail.",prov_eye:"Écosystème de contenu",prov_title:"Intégrations casino & casino live.",prov_sub:"Connectez votre plateforme aux fournisseurs de contenu reconnus.",prov_more:"De nombreux autres fournisseurs sont disponibles",contact_eye:"Parlez à notre équipe",contact_title:"Parlez-nous de votre projet.",contact_p:"Envoyez les détails de votre projet. Telegram s’ouvrira ensuite avec vos informations pré-remplies.",fname:"Prénom",lname:"Nom",company:"Société",email:"E-mail",region:"Région d’opération",interest:"Intérêt",website:"Site web",message:"Message",privacy_text:"En envoyant ce formulaire, vous acceptez l’utilisation de vos données pour répondre à votre demande.",privacy_link:"Confidentialité",send:"Envoyer le message →",formmsg:"Ouverture de Telegram…",foot_about:"Technologie iGaming modulaire pour sportsbook, casino, casino live, agents, paiements et backoffice.",terms:"Conditions générales",bh_sport_kicker:"LOGICIEL SPORTSBOOK",bh_sport_title:"PARIS SPORTIFS<br><span>AU NIVEAU SUPÉRIEUR</span>",bh_sport_p:"Des solutions puissantes pour les opérateurs de paris sportifs – pré-match, live betting et plateformes évolutives.",bh_sport_f1:"Paris en direct",bh_sport_f2:"Statistiques & flux de données",bh_sport_f3:"Flexible & évolutif",bh_casino_kicker:"LOGICIEL CASINO",bh_casino_title:"DIVERTISSEMENT CASINO<br><span>AU PLUS HAUT NIVEAU</span>",bh_casino_p:"Solutions casino et live casino premium avec des fournisseurs reconnus, des performances stables et une gestion centralisée.",bh_casino_f1:"Slots & Live Casino",bh_casino_f2:"Intégration des fournisseurs",bh_casino_f3:"Stable & performant",bh_learn:"En savoir plus →"},
+tr:{nav_products:"Ürünler",nav_platform:"Platform",nav_providers:"Sağlayıcılar",nav_contact:"İletişim",demo:"Demo Talep Et",eyebrow:"Esnek iGaming teknolojisi",hero:'TEK PLATFORM.<br><span>DAHA FAZLA KONTROL.</span>',lead:"Sportsbook, casino, canlı casino, acente, ödeme ve backoffice operasyonlarını modüler bir teknoloji yapısından yönetin ve büyütün.",demo2:"Demo Talep Et →",products_btn:"Ürünleri İncele",m1:"Hızlı kurulum",m2:"Modüler entegrasyon",m3:"Operatör odaklı kontrol",p1:"Pazar",p2:"Operatör",p3:"Oyuncu",p4:"Uptime",p5:"Destek",prod_eyebrow:"Ürünler & çözümler",prod_title:"Operasyon modelinize uyum sağlayan teknoloji.",prod_sub:"Tüm yapıyı veya yalnızca ihtiyacınız olan modülleri kullanın. Online, mobil, acente ve retail modelleri için.",s1t:"Sportsbook",s1p:"Maç öncesi ve canlı bahis, marketler, limitler, risk araçları ve esnek frontend entegrasyonu.",s2t:"Casino & Canlı Casino",s2p:"Önde gelen slot ve canlı casino sağlayıcılarını tek yönetim katmanında birleştirin.",s3t:"Acente & Retail",s3p:"Acenteler, shoplar, komisyonlar, bakiyeler, kasa işlemleri ve çok seviyeli yapılar.",s4t:"Backoffice & Ödemeler",s4p:"Oyuncu, işlem, raporlama, yetki, risk ve ödeme entegrasyonlarını merkezileştirin.",crypto_eye:"Kripto Casino",crypto_title:"Kripto uyumlu casino altyapısı.",crypto_p:"Casino içeriğini esnek kripto ödeme ve cüzdan entegrasyonlarıyla operatör odaklı tek bir yapıda birleştirin.",cf1t:"Kripto ödemeler",cf1p:"Yatırma ve çekme işlemleri için uyumlu PSP ve cüzdan altyapılarını entegre edin.",cf2t:"Çoklu para birimi",cf2p:"Teknik yapıya göre fiat ve kripto bakiye akışlarını destekleyin.",cf3t:"Casino entegrasyonu",cf3p:"Casino ve canlı casino içeriğini aynı platform yapısında birleştirin.",cf4t:"API & raporlama",cf4p:"İşlem ve operasyon verilerini merkezi raporlama süreçlerine bağlayın.",crypto_cta:"Çözümü incele →",crypto_note:"Kullanılabilirlik ödeme sağlayıcısına, yargı alanına ve teknik kuruluma bağlıdır.",learn:"Çözümü incele →",platform_eye:"Operatör kontrolü",platform_title:"Yazılımı değil operasyonu yönetin.",platform_p:"Oyuncu, acente, ödeme, işlem, sportsbook ve casino raporlaması için tek operasyon ortamı.",c1t:"Gerçek zamanlı raporlama",c1p:"Ciro, GGR, yatırma, çekme ve oyuncu aktivitesi.",c2t:"Detaylı yetkiler",c2p:"Rol, acente, shop veya ekip bazında erişim.",c3t:"Omnichannel",c3p:"Online, mobil, acente ve retail modelleri.",prov_eye:"İçerik ekosistemi",prov_title:"Casino & canlı casino entegrasyonları.",prov_sub:"Platformunuzu tanınmış oyun sağlayıcılarıyla bağlayın.",prov_more:"Çok sayıda başka sağlayıcı da mevcuttur",contact_eye:"Ekibimizle konuşun",contact_title:"Ne kurmak istediğinizi bize anlatın.",contact_p:"Proje bilgilerinizi gönderin. Ardından Telegram, bilgileriniz hazır şekilde açılır ve BetXsoft ile doğrudan iletişime geçebilirsiniz.",fname:"Ad",lname:"Soyad",company:"Şirket",email:"E-posta",region:"Operasyon bölgesi",interest:"İlgilendiğiniz ürün",website:"Web sitesi",message:"Mesaj",privacy_text:"Formu göndererek bilgilerinizi talebinize yanıt vermek için kullanmamızı kabul edersiniz.",privacy_link:"Gizlilik Politikası",send:"Mesaj Gönder →",formmsg:"Telegram açılıyor…",foot_about:"Sportsbook, casino, canlı casino, acente, ödeme ve backoffice için modüler iGaming teknolojisi.",terms:"Şartlar ve Koşullar",bh_sport_kicker:"SPOR BAHİSLERİ YAZILIMI",bh_sport_title:"SPOR BAHİSLERİ<br><span>BİR ÜST SEVİYEDE</span>",bh_sport_p:"Spor bahis operatörleri için güçlü çözümler – maç öncesi, canlı bahis ve ölçeklenebilir platformlar.",bh_sport_f1:"Canlı Bahis",bh_sport_f2:"İstatistik & Veri Akışları",bh_sport_f3:"Esnek & Ölçeklenebilir",bh_casino_kicker:"CASINO YAZILIMI",bh_casino_title:"CASINO EĞLENCESİ<br><span>EN ÜST SEVİYEDE</span>",bh_casino_p:"Lider sağlayıcılar, istikrarlı performans ve merkezi yönetim ile premium casino ve live casino çözümleri.",bh_casino_f1:"Slotlar & Live Casino",bh_casino_f2:"Sağlayıcı Entegrasyonu",bh_casino_f3:"Stabil & Yüksek Performans",bh_learn:"Daha fazla bilgi →"},
+it:{nav_products:"Prodotti",nav_platform:"Piattaforma",nav_providers:"Provider",nav_contact:"Contatto",demo:"Richiedi una Demo",eyebrow:"Tecnologia iGaming flessibile",hero:'UNA PIATTAFORMA.<br><span>PIÙ CONTROLLO.</span>',lead:"Lancia e scala sportsbook, casino, live casino, agenti, pagamenti e backoffice da uno stack tecnologico modulare.",demo2:"Richiedi una Demo →",products_btn:"Esplora i prodotti",m1:"Deploy rapido",m2:"Integrazioni modulari",m3:"Controllo operatore",p1:"Mercati",p2:"Operatori",p3:"Giocatori",p4:"Uptime",p5:"Supporto",prod_eyebrow:"Prodotti & soluzioni",prod_title:"Tecnologia che si adatta al tuo modello operativo.",prod_sub:"Usa l’intero stack o solo i moduli necessari. Per online, mobile, agenti e retail.",s1t:"Sportsbook",s1p:"Pre-match e live betting, mercati, limiti, rischio e integrazione frontend flessibile.",s2t:"Casino & Live Casino",s2p:"Collega provider slot e live dealer tramite un unico livello di gestione.",s3t:"Agenti & Retail",s3p:"Gestisci agenti, shop, commissioni, saldi, cassa e strutture multilivello.",s4t:"Backoffice & Pagamenti",s4p:"Centralizza giocatori, transazioni, reporting, permessi, rischio e pagamenti.",crypto_eye:"Crypto Casino",crypto_title:"Infrastruttura casino crypto-ready.",crypto_p:"Combina contenuti casino con integrazioni flessibili per pagamenti crypto e wallet in una soluzione orientata all’operatore.",cf1t:"Pagamenti crypto",cf1p:"Integra PSP e wallet compatibili per depositi e prelievi.",cf2t:"Multi-valuta",cf2p:"Supporta flussi fiat e crypto in base alla configurazione tecnica.",cf3t:"Integrazione casino",cf3p:"Unisci casino e live casino nello stesso stack di piattaforma.",cf4t:"API & reporting",cf4p:"Collega dati transazionali e operativi ai flussi di reporting centrali.",crypto_cta:"Esplora soluzione →",crypto_note:"Disponibilità in base al provider di pagamento, alla giurisdizione e al setup tecnico.",learn:"Esplora soluzione →",platform_eye:"Controllo operatore",platform_title:"Gestisci l’operazione, non il software.",platform_p:"Un ambiente unico per giocatori, agenti, pagamenti, transazioni, sportsbook e casino.",c1t:"Reporting in tempo reale",c1p:"Turnover, GGR, depositi, prelievi e attività giocatori.",c2t:"Permessi granulari",c2p:"Accesso per ruolo, agente, shop o team.",c3t:"Omnicanale",c3p:"Online, mobile, agenti e retail.",prov_eye:"Ecosistema contenuti",prov_title:"Integrazioni casino & live casino.",prov_sub:"Collega la piattaforma a provider gaming affermati.",prov_more:"Numerosi altri provider disponibili",contact_eye:"Parla con il team",contact_title:"Raccontaci cosa vuoi costruire.",contact_p:"Invia i dettagli del progetto. Telegram si aprirà con le informazioni precompilate per contattare BetXsoft.",fname:"Nome",lname:"Cognome",company:"Azienda",email:"E-mail",region:"Regione operativa",interest:"Interesse",website:"Sito web",message:"Messaggio",privacy_text:"Inviando il modulo accetti l’uso dei dati per rispondere alla richiesta.",privacy_link:"Privacy Policy",send:"Invia messaggio →",formmsg:"Apertura di Telegram…",foot_about:"Tecnologia iGaming modulare per sportsbook, casino, live casino, agenti, pagamenti e backoffice.",terms:"Termini e Condizioni",bh_sport_kicker:"SOFTWARE SPORTSBOOK",bh_sport_title:"SCOMMESSE SPORTIVE<br><span>AL LIVELLO SUCCESSIVO</span>",bh_sport_p:"Soluzioni potenti per operatori di scommesse sportive – pre-match, live betting e piattaforme scalabili.",bh_sport_f1:"Scommesse Live",bh_sport_f2:"Statistiche & Data Feed",bh_sport_f3:"Flessibile & Scalabile",bh_casino_kicker:"SOFTWARE CASINO",bh_casino_title:"INTRATTENIMENTO CASINO<br><span>AI MASSIMI LIVELLI</span>",bh_casino_p:"Soluzioni premium casino e live casino con provider leader, prestazioni stabili e gestione centralizzata.",bh_casino_f1:"Slot & Live Casino",bh_casino_f2:"Integrazione Provider",bh_casino_f3:"Stabile & Performante",bh_learn:"Scopri di più →"},
+ru:{nav_products:"Продукты",nav_platform:"Платформа",nav_providers:"Провайдеры",nav_contact:"Контакты",demo:"Запросить демо",eyebrow:"Гибкая iGaming-технология",hero:'ОДНА ПЛАТФОРМА.<br><span>БОЛЬШЕ КОНТРОЛЯ.</span>',lead:"Запускайте и масштабируйте sportsbook, casino, live casino, агентскую сеть, платежи и backoffice на модульной технологической платформе.",demo2:"Запросить демо →",products_btn:"Посмотреть продукты",m1:"Быстрый запуск",m2:"Модульные интеграции",m3:"Контроль для оператора",p1:"Рынки",p2:"Операторы",p3:"Игроки",p4:"Доступность",p5:"Поддержка",prod_eyebrow:"Продукты и решения",prod_title:"Технология, которая подстраивается под вашу модель.",prod_sub:"Используйте полный стек или только нужные модули для online, mobile, agent и retail.",s1t:"Sportsbook",s1p:"Pre-match и live betting, рынки, лимиты, риск-инструменты и гибкая frontend-интеграция.",s2t:"Casino & Live Casino",s2p:"Подключайте ведущих slot и live dealer провайдеров через единый слой управления.",s3t:"Агенты & Retail",s3p:"Управляйте агентами, точками, комиссиями, балансами, кассами и многоуровневыми структурами.",s4t:"Backoffice & Payments",s4p:"Централизуйте игроков, транзакции, отчеты, права, риски и платежные интеграции.",crypto_eye:"Крипто Casino",crypto_title:"Инфраструктура casino с поддержкой crypto.",crypto_p:"Объединяйте casino-контент с гибкими интеграциями криптоплатежей и кошельков в единой операторской среде.",cf1t:"Криптоплатежи",cf1p:"Подключайте совместимые PSP и кошельки для депозитов и выплат.",cf2t:"Мультивалютность",cf2p:"Поддерживайте fiat и crypto балансы в зависимости от технической конфигурации.",cf3t:"Интеграция casino",cf3p:"Объединяйте casino и live casino в одном технологическом стеке.",cf4t:"API & отчётность",cf4p:"Подключайте транзакционные и операционные данные к централизованной отчётности.",crypto_cta:"Подробнее →",crypto_note:"Доступность зависит от платёжного провайдера, юрисдикции и технической конфигурации.",learn:"Подробнее →",platform_eye:"Контроль оператора",platform_title:"Управляйте бизнесом, а не программой.",platform_p:"Единая операционная среда для игроков, агентов, платежей, транзакций, sportsbook и casino-отчетности.",c1t:"Отчеты в реальном времени",c1p:"Оборот, GGR, депозиты, выплаты и активность игроков.",c2t:"Гибкие права доступа",c2p:"Доступ по ролям, агентам, точкам и командам.",c3t:"Omnichannel",c3p:"Online, mobile, agent и retail модели.",prov_eye:"Экосистема контента",prov_title:"Интеграции casino & live casino.",prov_sub:"Подключайте платформу к известным игровым провайдерам.",prov_more:"Доступно множество других провайдеров",contact_eye:"Связаться с командой",contact_title:"Расскажите, что вы хотите запустить.",contact_p:"Отправьте данные проекта. Telegram откроется с заполненной информацией для прямого контакта с BetXsoft.",fname:"Имя",lname:"Фамилия",company:"Компания",email:"E-mail",region:"Регион работы",interest:"Интересует",website:"Сайт",message:"Сообщение",privacy_text:"Отправляя форму, вы соглашаетесь на использование данных для ответа на запрос.",privacy_link:"Политика конфиденциальности",send:"Отправить сообщение →",formmsg:"Открываем Telegram…",foot_about:"Модульная iGaming-технология для sportsbook, casino, live casino, агентов, платежей и backoffice.",terms:"Условия",bh_sport_kicker:"ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ SPORTSBOOK",bh_sport_title:"СПОРТИВНЫЕ СТАВКИ<br><span>НА НОВОМ УРОВНЕ</span>",bh_sport_p:"Мощные решения для букмекерских операторов – прематч, live-ставки и масштабируемые платформы.",bh_sport_f1:"Live-ставки",bh_sport_f2:"Статистика и фиды данных",bh_sport_f3:"Гибкость и масштабирование",bh_casino_kicker:"ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ CASINO",bh_casino_title:"CASINO-РАЗВЛЕЧЕНИЯ<br><span>НА ВЫСШЕМ УРОВНЕ</span>",bh_casino_p:"Премиальные решения casino и live casino с ведущими провайдерами, стабильной производительностью и централизованным управлением.",bh_casino_f1:"Слоты & Live Casino",bh_casino_f2:"Интеграция провайдеров",bh_casino_f3:"Стабильно и производительно",bh_learn:"Подробнее →"},
+pt:{nav_products:"Produtos",nav_platform:"Plataforma",nav_providers:"Provedores",nav_contact:"Contato",demo:"Solicitar Demo",eyebrow:"Tecnologia iGaming flexível",hero:'UMA PLATAFORMA.<br><span>MAIS CONTROLE.</span>',lead:"Lance e escale sportsbook, casino, live casino, agentes, pagamentos e backoffice a partir de uma stack tecnológica modular.",demo2:"Solicitar Demo →",products_btn:"Explorar Produtos",m1:"Implantação rápida",m2:"Integrações modulares",m3:"Controle para operadores",p1:"Mercados",p2:"Operadores",p3:"Jogadores",p4:"Uptime",p5:"Suporte",prod_eyebrow:"Produtos & soluções",prod_title:"Tecnologia que se adapta ao seu modelo operacional.",prod_sub:"Use a stack completa ou apenas os módulos necessários para online, mobile, agentes e retail.",s1t:"Sportsbook",s1p:"Pré-jogo e ao vivo, mercados, limites, ferramentas de risco e integração frontend flexível.",s2t:"Casino & Live Casino",s2p:"Conecte provedores líderes de slots e live dealer por uma única camada de gestão.",s3t:"Agentes & Retail",s3p:"Gerencie agentes, lojas, comissões, saldos, operações de caixa e estruturas multinível.",s4t:"Backoffice & Pagamentos",s4p:"Centralize jogadores, transações, relatórios, permissões, risco e pagamentos.",crypto_eye:"Crypto Casino",crypto_title:"Infraestrutura de casino preparada para crypto.",crypto_p:"Combine conteúdo de casino com integrações flexíveis de pagamentos em crypto e wallets em uma solução focada no operador.",cf1t:"Pagamentos crypto",cf1p:"Integre PSPs e wallets compatíveis para depósitos e saques.",cf2t:"Multi-moeda",cf2p:"Suporte fluxos fiat e crypto conforme a configuração técnica.",cf3t:"Integração casino",cf3p:"Combine casino e live casino na mesma stack de plataforma.",cf4t:"API & relatórios",cf4p:"Conecte dados transacionais e operacionais aos fluxos centrais de relatórios.",crypto_cta:"Explorar solução →",crypto_note:"A disponibilidade depende do provedor de pagamento, jurisdição e configuração técnica.",learn:"Explorar solução →",platform_eye:"Controle do operador",platform_title:"Gerencie a operação, não o software.",platform_p:"Um único ambiente para jogadores, agentes, pagamentos, transações, sportsbook e relatórios de casino.",c1t:"Relatórios em tempo real",c1p:"Turnover, GGR, depósitos, saques e atividade dos jogadores.",c2t:"Permissões granulares",c2p:"Acesso por função, agente, loja ou equipe.",c3t:"Omnichannel",c3p:"Modelos online, mobile, agentes e retail.",prov_eye:"Ecossistema de conteúdo",prov_title:"Integrações de casino & live casino.",prov_sub:"Conecte sua plataforma a provedores de conteúdo reconhecidos.",prov_more:"Muitos outros provedores disponíveis",contact_eye:"Fale com nossa equipe",contact_title:"Conte o que você quer construir.",contact_p:"Envie os detalhes do projeto. O Telegram será aberto com seus dados preenchidos para contato direto com a BetXsoft.",fname:"Nome",lname:"Sobrenome",company:"Empresa",email:"E-mail",region:"Região de operação",interest:"Interesse",website:"Website",message:"Mensagem",privacy_text:"Ao enviar o formulário, você concorda com o uso das informações para responder à sua solicitação.",privacy_link:"Política de Privacidade",send:"Enviar mensagem →",formmsg:"Abrindo Telegram…",foot_about:"Tecnologia iGaming modular para sportsbook, casino, live casino, agentes, pagamentos e backoffice.",terms:"Termos e Condições",bh_sport_kicker:"SOFTWARE SPORTSBOOK",bh_sport_title:"APOSTAS ESPORTIVAS<br><span>EM OUTRO NÍVEL</span>",bh_sport_p:"Soluções robustas para operadores de apostas esportivas – pré-jogo, apostas ao vivo e plataformas escaláveis.",bh_sport_f1:"Apostas ao Vivo",bh_sport_f2:"Estatísticas & Feeds de Dados",bh_sport_f3:"Flexível & Escalável",bh_casino_kicker:"SOFTWARE CASINO",bh_casino_title:"ENTRETENIMENTO CASINO<br><span>NO MAIS ALTO NÍVEL</span>",bh_casino_p:"Soluções premium de casino e live casino com provedores líderes, desempenho estável e gestão centralizada.",bh_casino_f1:"Slots & Live Casino",bh_casino_f2:"Integração de Provedores",bh_casino_f3:"Estável & Alto Desempenho",bh_learn:"Saiba mais →"}
+};
+
+const FLAG_SVG={
+en:`<svg viewBox="0 0 24 24"><defs><clipPath id="c"><circle cx="12" cy="12" r="12"/></clipPath></defs><g clip-path="url(#c)"><rect width="24" height="24" fill="#21468B"/><path d="M0 0l24 24M24 0L0 24" stroke="#fff" stroke-width="5"/><path d="M0 0l24 24M24 0L0 24" stroke="#C8102E" stroke-width="2.4"/><path d="M12 0v24M0 12h24" stroke="#fff" stroke-width="7"/><path d="M12 0v24M0 12h24" stroke="#C8102E" stroke-width="4"/></g></svg>`,
+de:`<svg viewBox="0 0 24 24"><clipPath id="c"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#c)"><rect width="24" height="8" y="0" fill="#000"/><rect width="24" height="8" y="8" fill="#DD0000"/><rect width="24" height="8" y="16" fill="#FFCE00"/></g></svg>`,
+fr:`<svg viewBox="0 0 24 24"><clipPath id="c"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#c)"><rect width="8" height="24" fill="#0055A4"/><rect x="8" width="8" height="24" fill="#fff"/><rect x="16" width="8" height="24" fill="#EF4135"/></g></svg>`,
+tr:`<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#E30A17"/><circle cx="10" cy="12" r="5" fill="#fff"/><circle cx="11.5" cy="12" r="4" fill="#E30A17"/><path d="M15 9.5l.8 1.6 1.8.3-1.3 1.2.3 1.8-1.6-.8-1.6.8.3-1.8-1.3-1.2 1.8-.3z" fill="#fff"/></svg>`,
+it:`<svg viewBox="0 0 24 24"><clipPath id="c"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#c)"><rect width="8" height="24" fill="#009246"/><rect x="8" width="8" height="24" fill="#fff"/><rect x="16" width="8" height="24" fill="#CE2B37"/></g></svg>`,
+ru:`<svg viewBox="0 0 24 24"><clipPath id="c"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#c)"><rect width="24" height="8" fill="#fff"/><rect y="8" width="24" height="8" fill="#0039A6"/><rect y="16" width="24" height="8" fill="#D52B1E"/></g></svg>`,
+pt:`<svg viewBox="0 0 24 24"><clipPath id="c"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#c)"><rect width="9" height="24" fill="#046A38"/><rect x="9" width="15" height="24" fill="#DA291C"/><circle cx="9" cy="12" r="4" fill="#FFCC00"/></g></svg>`
+};
+function updateFlag(l){const el=document.getElementById("activeFlag");if(el)el.innerHTML=FLAG_SVG[l]||FLAG_SVG.en;}
+
+function setLang(l){const d=T[l]||T.en;updateFlag(l);document.documentElement.lang=l;document.querySelectorAll("[data-i18n]").forEach(e=>{if(d[e.dataset.i18n])e.textContent=d[e.dataset.i18n]});document.querySelectorAll("[data-i18n-html]").forEach(e=>{if(d[e.dataset.i18nHtml])e.innerHTML=d[e.dataset.i18nHtml]});localStorage.setItem("betxsoft_lang",l)}
+const sel=document.getElementById("lang");const saved=localStorage.getItem("betxsoft_lang")||"en";sel.value=saved;setLang(saved);sel.addEventListener("change",e=>setLang(e.target.value));
+
+
+if(new URLSearchParams(location.search).get("sent")==="1"){
+  const m=document.getElementById("formMsg");
+  if(m){m.style.display="block";m.textContent="Message sent successfully.";}
+}
+
+
+const protectedForm=document.querySelector('form[data-formsubmit="protected"]');
+if(protectedForm){
+  const codes=[105,110,102,111,64,98,101,116,120,115,111,102,116,46,99,111,109];
+  const mailbox=codes.map(c=>String.fromCharCode(c)).join('');
+  protectedForm.action='https://formsubmit.co/'+mailbox;
+}
+
+</script>
+
+<a class="telegram-float" href="https://t.me/BETXSOFT" target="_blank" rel="noopener" aria-label="Telegram @BETXSOFT" title="Telegram @BETXSOFT">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path fill="currentColor" d="M21.7 3.3 18.5 19c-.24 1.11-.88 1.38-1.78.86l-4.87-3.59-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.02-8.15c.39-.35-.09-.55-.61-.2L6.13 12.72l-4.8-1.5c-1.04-.33-1.06-1.04.22-1.54L20.3 2.45c.87-.32 1.63.2 1.4.85Z"/>
+</svg>
+</a>
+
+<script>
+(function(){
+  const root=document.getElementById('betxHeroSlider');
+  if(!root) return;
+  const slides=[...root.querySelectorAll('.betx-slide')];
+  const dots=[...root.querySelectorAll('.betx-dot')];
+  let current=0, timer=null, touchX=0;
+
+  function show(i){
+    current=(i+slides.length)%slides.length;
+    slides.forEach((s,n)=>s.classList.toggle('active',n===current));
+    dots.forEach((d,n)=>d.classList.toggle('active',n===current));
+  }
+  function start(){
+    clearInterval(timer);
+    timer=setInterval(()=>show(current+1),5000);
+  }
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{show(i);start()}));
+  root.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX},{passive:true});
+  root.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-touchX;
+    if(Math.abs(dx)>45){show(current+(dx<0?1:-1));start()}
+  },{passive:true});
+  start();
+})();
+</script>
+</body></html>
